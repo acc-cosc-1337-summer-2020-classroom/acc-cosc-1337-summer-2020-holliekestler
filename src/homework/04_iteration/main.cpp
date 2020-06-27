@@ -23,18 +23,25 @@ int main()
 		{
 			cout<<"Enter the DNA string: \n";
 			cin>>dna;
-			cout<<get_gc_content(dna);			
+			cout<<get_gc_content(dna);
+			cout<<"\n";			
 		}
 		else if(choice == 2)
 		{
 			cout<<"Enter the DNA string: \n";
 			cin>>dna;
-			cout<<get_dna_complement(dna);			
+			cout<<get_dna_complement(dna);
+			cout<<"\n";			
+		}
+		else if(choice == 'y' || choice == 'Y')
+		{
+			break;
 		}
 		else
 		{
 			break;
 		}
+		
 		
 	}
 	
