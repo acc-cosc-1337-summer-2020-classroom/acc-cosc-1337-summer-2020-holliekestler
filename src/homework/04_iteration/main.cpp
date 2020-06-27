@@ -24,13 +24,11 @@ int main()
 
 		if(choice == 1)
 		{
-			get_gc_content(dna);
-			cout<<dna;
+			cout<<get_gc_content(dna);			
 		}
 		else if(choice == 2)
 		{
-			get_dna_complement(dna);
-			cout<<dna;
+			cout<<get_dna_complement(dna);			
 		}
 		else
 		{
