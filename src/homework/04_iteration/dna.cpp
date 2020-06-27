@@ -7,15 +7,39 @@ Iterate string count Gs and Cs, divide count by string length.
 Return quotient.
 */
 
+double get_gc_content(const std::string & dna)
+{
+    double  gc = 0;
 
+    for(int i = 0; i < dna.length(); i++)
+    {
+        if(dna[i] == 'G' || dna[i] == 'C')
+        {
+            gc++;
+        }
+    }
 
+    double gc_content = (gc/dna.length());
+    return gc_content;
+
+}
 
 /*
 Write code for function get_reverse_string that
 accepts a string parameter and returns a string reversed.
 */
 
+std::string get_reverse_string(std::string dna)
+{
+    std::string reverse;
 
+    for(int i = dna.size() - 1; i >= 0; i--)
+    {
+        reverse = reverse.append(1, dna[i]);
+    }
+
+    return reverse;
+}
 
 /*
 Write prototype for function get_dna_complement that
@@ -28,3 +52,27 @@ c. return string
 
 */
 
+std::string get_dna_complement(std::string dna)
+{
+    std::string reverse_complement = get_reverse_string(dna);
+
+    for(int i = 0; i < dna.length(); i++) {
+    if(dna[i] == 'A')
+    {
+        reverse_complement[i] = 'T';
+    }
+    else if(dna[i] == 'T')
+    {
+        reverse_complement[i] = 'A';
+    }
+    else if(dna[i] == 'G')
+    {
+        reverse_complement[i] = 'C';
+    }
+    else
+    {
+        reverse_complement[i] = 'G';
+    }
+    }
+    return reverse_complement;
+}
