@@ -15,6 +15,6 @@ TEST_CASE("Test class function Engineer::get_pay") {
 }
 
 TEST_CASE("Test class function SalesEmployee::get_pay") {
-    SalesEmployee *sales_employee = new SalesEmployee(40,10,500);
+    SalesEmployee *sales_employee = new SalesEmployee(40, 10, 500);
     REQUIRE(sales_employee->get_pay() == 900);
 }
