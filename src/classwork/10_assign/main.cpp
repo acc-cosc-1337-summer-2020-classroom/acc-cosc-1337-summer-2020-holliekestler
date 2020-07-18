@@ -1,7 +1,7 @@
 //main
-#include "employee.cpp"
-#include "engineer.cpp"
-#include "sales_employee.cpp"
+#include "employee.h"
+#include "engineer.h"
+#include "sales_employee.h"
 #include <iostream>
 
 using std::cout;
@@ -24,7 +24,7 @@ int main() {
 
             Employee *engineer = new Engineer(base_pay, bonus);
 
-            cout << "Engineer pay: " << engineer->get_pay() << '/n';
+            cout << "Engineer pay: " << engineer->get_pay() << '\n';
 
             delete engineer;
             engineer = nullptr;
@@ -40,12 +40,12 @@ int main() {
 
             Employee *sales_employee = new SalesEmployee(hours, rate, commission);
 
-            cout << "Sales employee pay: " << sales_employee->get_pay() << '/n';
+            cout << "Sales employee pay: " << sales_employee->get_pay() << '\n';
 
             delete sales_employee;
             sales_employee = nullptr;
         }
-    } while (choice == 'q');
+    } while (choice != 'q');
 
     return 0;
 }

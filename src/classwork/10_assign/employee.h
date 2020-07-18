@@ -1,4 +1,5 @@
-
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
 class Employee {
 public:
     Employee() {}
@@ -11,3 +12,4 @@ public:
 protected:
     double base_pay, bonus, hours, rate, commission;
 };
+#endif
